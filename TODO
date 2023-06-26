@@ -1,0 +1,2 @@
+use `tsc` instead of `father`
+extract `execute-command-promise`

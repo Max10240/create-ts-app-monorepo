@@ -1,0 +1,23 @@
+{%- set isCjs = module === 'commonjs' -%}
+{
+  "compilerOptions": {
+    "target": "{{ target or 'esnext' }}",
+    "module": "{{ module }}",
+    "moduleResolution": "nodenext",
+    "moduleDetection": "force",
+    {% if not isCjs -%}
+    "jsx": "react",
+    {% endif -%}
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "rootDir": "src/",
+    "noEmit": true,
+    "declaration": true,
+    "sourceMap": true
+  }
+}

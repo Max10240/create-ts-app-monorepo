@@ -1,0 +1,45 @@
+{
+  "name": "async-nunjucks",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "use nunjucks with ES6 Promise",
+  "author": "Baolong Wang <wangbaolong36@gmail.com>",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "father dev",
+    "build": "father build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "async",
+    "nunjucks"
+  ],
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "nunjucks": "^3.2.4",
+    "nunjucks-async-loader": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/nunjucks": "^3.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}

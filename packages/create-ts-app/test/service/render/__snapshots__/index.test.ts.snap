@@ -1,0 +1,123 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`render fatherrc > fatherrc 1`] = `
+"import { defineConfig } from \\"father\\";
+
+export default defineConfig({
+  platform: 'node',
+  cjs: {},
+  esm: {},
+});
+"
+`;
+
+exports[`render package.json > project0-esm-max 1`] = `
+"{
+  \\"name\\": \\"project-name-0\\",
+  \\"type\\": \\"module\\",
+  \\"version\\": \\"0.0.0\\",
+  \\"description\\": \\"a project create by create-ts-app\\",
+  \\"author\\": \\"Max <max@gmail.com>\\",
+  \\"main\\": \\"dist/cjs/index.js\\",
+  \\"module\\": \\"dist/esm/index.js\\",
+  \\"types\\": \\"dist/esm/index.d.ts\\",
+  \\"exports\\": {
+    \\".\\": {
+      \\"import\\": {
+        \\"types\\": \\"./dist/esm/index.d.ts\\",
+        \\"default\\": \\"./dist/esm/index.js\\"
+      },
+      \\"require\\": {
+        \\"types\\": \\"./dist/esm/index.d.ts\\",
+        \\"default\\": \\"./dist/cjs/index.js\\"
+      }
+    }
+  },
+  \\"sideEffects\\": false,
+  \\"scripts\\": {
+    \\"dev\\": \\"father dev\\",
+    \\"build\\": \\"father build\\",
+    \\"test\\": \\"vitest\\"
+  },
+  \\"files\\": [
+    \\"dist\\"
+  ]
+}"
+`;
+
+exports[`render package.json > project1-esm-max 1`] = `
+"{
+  \\"name\\": \\"project-name-1\\",
+  \\"version\\": \\"0.0.0\\",
+  \\"description\\": \\"a project create by create-ts-app\\",
+  \\"main\\": \\"dist/cjs/index.js\\",
+  \\"module\\": \\"dist/esm/index.js\\",
+  \\"types\\": \\"dist/esm/index.d.ts\\",
+  \\"exports\\": {
+    \\".\\": {
+      \\"import\\": {
+        \\"types\\": \\"./dist/esm/index.d.ts\\",
+        \\"default\\": \\"./dist/esm/index.js\\"
+      },
+      \\"require\\": {
+        \\"types\\": \\"./dist/esm/index.d.ts\\",
+        \\"default\\": \\"./dist/cjs/index.js\\"
+      }
+    }
+  },
+  \\"sideEffects\\": false,
+  \\"scripts\\": {
+    \\"dev\\": \\"father dev\\",
+    \\"build\\": \\"father build\\",
+    \\"test\\": \\"vitest\\"
+  },
+  \\"files\\": [
+    \\"dist\\"
+  ]
+}"
+`;
+
+exports[`render tsconfig > commonjs-es2017 1`] = `
+"{
+  \\"compilerOptions\\": {
+    \\"target\\": target,
+    \\"module\\": module,
+    \\"moduleResolution\\": \\"nodenext\\",
+    \\"moduleDetection\\": \\"force\\",
+    \\"esModuleInterop\\": true,
+    \\"strict\\": true,
+    \\"skipLibCheck\\": true,
+    \\"baseUrl\\": \\"./\\",
+    \\"paths\\": {
+      \\"@/*\\": [\\"./src/*\\"]
+    },
+    \\"rootDir\\": \\"src/\\",
+    \\"noEmit\\": true,
+    \\"declaration\\": true,
+    \\"sourceMap\\": true
+  }
+}"
+`;
+
+exports[`render tsconfig > esm 1`] = `
+"{
+  \\"compilerOptions\\": {
+    \\"target\\": target,
+    \\"module\\": module,
+    \\"moduleResolution\\": \\"nodenext\\",
+    \\"moduleDetection\\": \\"force\\",
+    \\"jsx\\": \\"react\\",
+    \\"esModuleInterop\\": true,
+    \\"strict\\": true,
+    \\"skipLibCheck\\": true,
+    \\"baseUrl\\": \\"./\\",
+    \\"paths\\": {
+      \\"@/*\\": [\\"./src/*\\"]
+    },
+    \\"rootDir\\": \\"src/\\",
+    \\"noEmit\\": true,
+    \\"declaration\\": true,
+    \\"sourceMap\\": true
+  }
+}"
+`;
