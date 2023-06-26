@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 import path from 'node:path';
+import { readFileSync } from 'node:fs';
+import { join } from 'desm';
+
 import { cac } from 'cac';
 import { PromptService, RenderService, ETplName, type Answer, executeCmdWithResult } from './service/index.js';
 import * as process from 'process';
@@ -19,14 +22,19 @@ async function getGitUserInfo(): Promise<{ name: string; email: string } | null>
   return null;
 }
 
+const version = JSON.parse(readFileSync(join(import.meta.url, '../../package.json'), 'utf8')).version;
+
 const cli = cac();
 
 cli
   .option('-m, --module <module>', 'module type')
   .option('-t, --target <target>', 'target')
-  .help();
+  .help()
+  .version(version);
 
 const { args, options } = cli.parse() as { args: string[], options: ICliOption };
+
+if (cli.options.version || cli.options.version) process.exit();
 
 (async function () {
   const promptQuestionNames: (keyof Answer)[] = [
