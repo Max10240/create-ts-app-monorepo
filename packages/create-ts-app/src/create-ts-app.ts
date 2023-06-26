@@ -34,7 +34,7 @@ cli
 
 const { args, options } = cli.parse() as { args: string[], options: ICliOption };
 
-if (cli.options.version || cli.options.version) process.exit();
+if (cli.options.help || cli.options.version) process.exit();
 
 (async function () {
   const promptQuestionNames: (keyof Answer)[] = [
