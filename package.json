@@ -1,11 +1,12 @@
 {
   "name": "@ts-devtools/mono",
-  "version": "0.0.0",
+  "version": "0.0.1-beta.1",
   "description": "monorepo of ts-devtools",
   "packageManager": "pnpm@8.6.2",
   "scripts": {},
   "devDependencies": {
     "@types/node": "^20.3.1",
+    "bumpp": "^9.1.1",
     "father": "^4.2.3",
     "pnpm": "8.6.2",
     "rimraf": "^5.0.0",
