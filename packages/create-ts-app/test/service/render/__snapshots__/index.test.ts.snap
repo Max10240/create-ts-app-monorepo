@@ -41,7 +41,13 @@ exports[`render package.json > project0-esm-max 1`] = `
   },
   \\"files\\": [
     \\"dist\\"
-  ]
+  ],
+  \\"devDependencies\\": {
+    \\"@types/node\\": \\"^20.3.1\\",
+    \\"father\\": \\"^4.2.3\\",
+    \\"typescript\\": \\"^5.1.3\\",
+    \\"vitest\\": \\"^0.32.2\\"
+  }
 }"
 `;
 
@@ -73,15 +79,21 @@ exports[`render package.json > project1-esm-max 1`] = `
   },
   \\"files\\": [
     \\"dist\\"
-  ]
+  ],
+  \\"devDependencies\\": {
+    \\"@types/node\\": \\"^20.3.1\\",
+    \\"father\\": \\"^4.2.3\\",
+    \\"typescript\\": \\"^5.1.3\\",
+    \\"vitest\\": \\"^0.32.2\\"
+  }
 }"
 `;
 
 exports[`render tsconfig > commonjs-es2017 1`] = `
 "{
   \\"compilerOptions\\": {
-    \\"target\\": target,
-    \\"module\\": module,
+    \\"target\\": \\"es2017\\",
+    \\"module\\": \\"commonjs\\",
     \\"moduleResolution\\": \\"nodenext\\",
     \\"moduleDetection\\": \\"force\\",
     \\"esModuleInterop\\": true,
@@ -102,8 +114,8 @@ exports[`render tsconfig > commonjs-es2017 1`] = `
 exports[`render tsconfig > esm 1`] = `
 "{
   \\"compilerOptions\\": {
-    \\"target\\": target,
-    \\"module\\": module,
+    \\"target\\": \\"esnext\\",
+    \\"module\\": \\"esnext\\",
     \\"moduleResolution\\": \\"nodenext\\",
     \\"moduleDetection\\": \\"force\\",
     \\"jsx\\": \\"react\\",

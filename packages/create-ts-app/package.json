@@ -12,11 +12,12 @@
     "dev": "father dev",
     "build": "father build && cp -r templates/ dist/",
     "test": "vitest",
+    "typecheck": "tsc --noEmit",
     "generate-tpl-files-type": "ts-node --esm scripts/generate-tpl-files-type.mts",
     "predev": "npm run generate-tpl-files-type",
     "prebuild": "npm run generate-tpl-files-type",
     "pretest": "npm run generate-tpl-files-type",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run typecheck && npm run build"
   },
   "keywords": [
     "create-ts-app",

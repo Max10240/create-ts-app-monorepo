@@ -59,8 +59,10 @@ if (cli.options.help || cli.options.version) process.exit();
       module: finalOptions.module,
       target: finalOptions.target,
     },
-    [ETplName.vitestConfigTs]: {},
+    [ETplName.vitestConfigMts]: {},
+    [ETplName.src__indexTs]: {},
     [ETplName.test__tsconfigJson]: {},
+    [ETplName.test__indexTestTs]: {},
   });
 
   console.log('done.');

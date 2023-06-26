@@ -17,8 +17,10 @@ export interface RenderContext {
     isESM?: boolean;
     author?: string;
   };
-  [ETplName.vitestConfigTs]: {};
+  [ETplName.vitestConfigMts]: {};
+  [ETplName.src__indexTs]: {};
   [ETplName.test__tsconfigJson]: {};
+  [ETplName.test__indexTestTs]: {};
 }
 
 export class RenderService {
