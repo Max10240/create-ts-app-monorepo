@@ -27,7 +27,7 @@ Options:
 ```shell
 create-ts-app
 ```
-![demo](examples/creat-ts-app/create-by-prompt.gif)
+![demo](https://github.com/Max10240/create-ts-app-monorepo/raw/master/packages/create-ts-app/examples/creat-ts-app/create-by-prompt.gif)
 
 ### Or, you can create an app by CLI args
 ```shell

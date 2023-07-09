@@ -4,6 +4,11 @@
   "version": "0.0.1-beta.15",
   "description": "use nunjucks with ES6 Promise",
   "author": "Baolong Wang <wangbaolong36@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Max10240/create-ts-app.git",
+    "directory": "packages/async-nunjucks"
+  },
   "main": "dist/cjs/index.cjs",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
