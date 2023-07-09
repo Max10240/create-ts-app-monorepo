@@ -1,7 +1,7 @@
 {
   "name": "@ts-devtools/create-ts-app",
   "type": "module",
-  "version": "0.0.1-beta.13",
+  "version": "0.0.1-beta.14",
   "description": "create a ts app for you",
   "author": "Baolong Wang <wangbaolong36@gmail.com>",
   "main": "dist/esm/index.js",
