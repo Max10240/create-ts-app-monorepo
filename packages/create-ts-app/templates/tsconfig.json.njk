@@ -1,5 +1,6 @@
 {%- set isCjs = module === 'commonjs' -%}
 {
+  "include": ["src/"],
   "compilerOptions": {
     "target": "{{ target or 'esnext' }}",
     "module": "{{ module }}",
