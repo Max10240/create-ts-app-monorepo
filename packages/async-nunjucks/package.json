@@ -39,6 +39,9 @@
   "devDependencies": {
     "@types/nunjucks": "^3.2.2"
   },
+  "peerDependencies": {
+    "@types/nunjucks": "^3.2.2"
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }
