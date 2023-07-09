@@ -28,7 +28,8 @@
     "project"
   ],
   "files": [
-    "dist"
+    "dist",
+    "examples"
   ],
   "dependencies": {
     "async-nunjucks": "workspace:^",

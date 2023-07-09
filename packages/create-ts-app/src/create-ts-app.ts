@@ -24,12 +24,13 @@ async function getGitUserInfo(): Promise<{ name: string; email: string } | null>
 
 const version = JSON.parse(readFileSync(join(import.meta.url, '../../package.json'), 'utf8')).version;
 
-const cli = cac();
+const cli = cac('create-ts-app');
 
 cli
   .option('-m, --module <module>', 'module type')
   .option('-t, --target <target>', 'target')
   .help()
+  .usage('[OPTION]... [NAME]')
   .version(version);
 
 const { args, options } = cli.parse() as { args: string[], options: ICliOption };

@@ -2,6 +2,9 @@ import { defineConfig } from "father";
 
 export default defineConfig({
   platform: 'node',
-  cjs: {},
+  {% if isESM -%}
   esm: {},
+  {% else -%}
+  cjs: {},
+  {% endif -%}
 });
