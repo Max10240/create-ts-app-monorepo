@@ -6,7 +6,7 @@
   "author": "Baolong Wang <wangbaolong36@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Max10240/create-ts-app.git",
+    "url": "git+https://github.com/Max10240/create-ts-app-monorepo.git",
     "directory": "packages/async-nunjucks"
   },
   "main": "dist/cjs/index.cjs",
