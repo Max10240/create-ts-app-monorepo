@@ -1,7 +1,7 @@
 {
   "name": "async-nunjucks",
   "type": "module",
-  "version": "0.0.1-beta.15",
+  "version": "0.0.1-beta.16",
   "description": "use nunjucks with ES6 Promise",
   "author": "Baolong Wang <wangbaolong36@gmail.com>",
   "repository": {
