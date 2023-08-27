@@ -11,13 +11,15 @@ export interface RenderContext {
     module: string;
     target?: string;
   };
-  [ETplName.fatherrcTs]: {};
+  [ETplName.fatherrcTs]: {
+    isESM?: boolean;
+  };
   [ETplName.packageJson]: {
     name: string;
     isESM?: boolean;
     author?: string;
   };
-  [ETplName.vitestConfigMts]: {};
+  [ETplName.test__vitestConfigMts]: {};
   [ETplName.src__indexTs]: {};
   [ETplName.test__tsconfigJson]: {};
   [ETplName.test__indexTestTs]: {};

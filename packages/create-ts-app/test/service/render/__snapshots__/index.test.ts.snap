@@ -6,8 +6,7 @@ exports[`render fatherrc > fatherrc 1`] = `
 export default defineConfig({
   platform: 'node',
   cjs: {},
-  esm: {},
-});
+  });
 "
 `;
 
@@ -37,7 +36,8 @@ exports[`render package.json > project0-esm-max 1`] = `
   \\"scripts\\": {
     \\"dev\\": \\"father dev\\",
     \\"build\\": \\"father build\\",
-    \\"test\\": \\"vitest\\"
+    \\"test\\": \\"vitest -c test/vitest.config.mts\\",
+    \\"test:run\\": \\"vitest -c test/vitest.config.mts --run\\"
   },
   \\"files\\": [
     \\"dist\\"
@@ -75,7 +75,8 @@ exports[`render package.json > project1-esm-max 1`] = `
   \\"scripts\\": {
     \\"dev\\": \\"father dev\\",
     \\"build\\": \\"father build\\",
-    \\"test\\": \\"vitest\\"
+    \\"test\\": \\"vitest -c test/vitest.config.mts\\",
+    \\"test:run\\": \\"vitest -c test/vitest.config.mts --run\\"
   },
   \\"files\\": [
     \\"dist\\"
@@ -91,6 +92,7 @@ exports[`render package.json > project1-esm-max 1`] = `
 
 exports[`render tsconfig > commonjs-es2017 1`] = `
 "{
+  \\"include\\": [\\"src/\\"],
   \\"compilerOptions\\": {
     \\"target\\": \\"es2017\\",
     \\"module\\": \\"commonjs\\",
@@ -113,6 +115,7 @@ exports[`render tsconfig > commonjs-es2017 1`] = `
 
 exports[`render tsconfig > esm 1`] = `
 "{
+  \\"include\\": [\\"src/\\"],
   \\"compilerOptions\\": {
     \\"target\\": \\"esnext\\",
     \\"module\\": \\"esnext\\",

@@ -42,17 +42,19 @@ if (cli.options.help || cli.options.version) process.exit();
     ...(['module', 'target'] as const).filter(name => !options[name]),
     ...(args[0] ? [] : ['name'] as const),
   ];
-  const promptResult = await new PromptService(promptQuestionNames).prompt();
+  const promptResult: Omit<Answer, 'name'> & { name?: Answer['name'] } = await new PromptService(promptQuestionNames).prompt();
 
-  const finalOptions = { ...options, ...promptResult } as Answer;
+  const finalOptions = { name: args[0], ...options, ...promptResult } as Answer;
 
   const gitUserInfo = await getGitUserInfo();
 
   const renderService = new RenderService(path.join(process.cwd(), finalOptions.name));
   await renderService.writeAll({
-    [ETplName.fatherrcTs]: {},
+    [ETplName.fatherrcTs]: {
+      isESM: finalOptions.module === 'esnext',
+    },
     [ETplName.packageJson]: {
-      name: finalOptions.name,
+      name: path.basename(finalOptions.name),
       isESM: finalOptions.module === 'esnext',
       author: gitUserInfo ? `${gitUserInfo.name} <${gitUserInfo.email}>` : void 0,
     },
@@ -60,7 +62,7 @@ if (cli.options.help || cli.options.version) process.exit();
       module: finalOptions.module,
       target: finalOptions.target,
     },
-    [ETplName.vitestConfigMts]: {},
+    [ETplName.test__vitestConfigMts]: {},
     [ETplName.src__indexTs]: {},
     [ETplName.test__tsconfigJson]: {},
     [ETplName.test__indexTestTs]: {},
