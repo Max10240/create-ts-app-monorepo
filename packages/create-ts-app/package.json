@@ -16,8 +16,11 @@
   "scripts": {
     "dev": "father dev",
     "build": "father build && cp -r templates/ dist/",
-    "test": "vitest",
+    "test": "vitest --run && npm run typecheck",
+    "test:watch": "run-p vitest:watch typecheck:watch",
+    "vitest:watch": "vitest",
     "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc -w --noEmit",
     "generate-tpl-files-type": "ts-node --esm scripts/generate-tpl-files-type.mts",
     "predev": "npm run generate-tpl-files-type",
     "prebuild": "npm run generate-tpl-files-type",
